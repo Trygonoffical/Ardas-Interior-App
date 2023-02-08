@@ -73,67 +73,66 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
                         borderRadius: BorderRadius.circular(5),
                         color: Colors.white,
                       ),
-                      child: Stack(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Column(
+                          SizedBox(
+                            height: getMediaQueryHeight(
+                                context: context, value: 100),
+                            width: double.infinity,
+                            child: Image.asset(
+                              shopItem[index]["materialpic"].toString(),
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+
+                          Padding(
+                            padding: EdgeInsets.only(top: 10.0, bottom: 5),
+                            child: Text(
+                              shopItem[index]["materialname"].toString(),
+                            ),
+                          ),
+                          // SizedBox(
+                          //   height: getMediaQueryHeight(
+                          //       context: context, value: 2),
+                          // ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              SizedBox(
-                                height: getMediaQueryHeight(
-                                    context: context, value: 120),
-                                width: double.infinity,
-                                child: Image.asset(
-                                  shopItem[index]["materialpic"].toString(),
-                                  fit: BoxFit.fill,
-                                ),
+                              Text(
+                                "Starting  ",
+                                style: TextStyle(fontSize: 14),
                               ),
-                              Divider(
-                                thickness: 2,
-                              ),
-                              // SizedBox(
-                              //   height: getMediaQueryHeight(
-                              //       context: context, value: 5),
-                              // ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 10.0, bottom: 5),
-                                child: Text(
-                                  shopItem[index]["materialname"].toString(),
-                                ),
-                              ),
-                              // SizedBox(
-                              //   height: getMediaQueryHeight(
-                              //       context: context, value: 2),
-                              // ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "Starting  ",
-                                    style: TextStyle(fontSize: 14),
-                                  ),
-                                  Text(
-                                    NumberFormat.simpleCurrency(
-                                            locale: 'hi-IN', decimalDigits: 0)
-                                        .format(5552522)
-                                        .toString(),
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold),
-                                  )
-                                ],
-                              ),
+                              Text(
+                                NumberFormat.simpleCurrency(
+                                        locale: 'hi-IN', decimalDigits: 0)
+                                    .format(5552522)
+                                    .toString(),
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              )
                             ],
                           ),
-                          Positioned(
-                            top: 110,
-                            left: 30,
-                            child: Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    border: Border.all(width: 2)),
-                                height: getMediaQueryHeight(
-                                    context: context, value: 28),
-                                width: getMediaQueryWidth(
-                                    context: context, value: 100),
-                                child: Center(child: Text("976+ options"))),
+                          Divider(
+                            thickness: 1,
+                          ),
+
+                          Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border.all(
+                                      width: 2, color: Color(0xff964b00))),
+                              height: getMediaQueryHeight(
+                                  context: context, value: 28),
+                              width: getMediaQueryWidth(
+                                  context: context, value: 100),
+                              child: Center(
+                                  child: Text(
+                                "976+ options",
+                                style: TextStyle(color: Color(0xff964b00)),
+                              ))),
+                          SizedBox(
+                            height: getMediaQueryHeight(
+                                context: context, value: 10),
                           ),
                         ],
                       ),
@@ -143,9 +142,9 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
               ),
             ),
           ),
-          SizedBox(
-            height: getMediaQueryHeight(context: context, value: 5),
-          )
+          // SizedBox(
+          //   height: getMediaQueryHeight(context: context, value: 5),
+          // )
         ],
       ),
     );

@@ -34,6 +34,8 @@ import '../modules/SholpScreen/ShopItem/bindings/shop_item_binding.dart';
 import '../modules/SholpScreen/ShopItem/views/shop_item_view.dart';
 import '../modules/SholpScreen/bindings/sholp_screen_binding.dart';
 import '../modules/SholpScreen/views/sholp_screen_view.dart';
+import '../modules/SplashScreen/bindings/splash_screen_binding.dart';
+import '../modules/SplashScreen/views/splash_screen_view.dart';
 import '../modules/Upload_Product/bindings/upload_product_binding.dart';
 import '../modules/Upload_Product/views/upload_product_view.dart';
 import '../modules/YouTube_Video/bindings/you_tube_video_binding.dart';
@@ -50,7 +52,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.MAIN_SCREEN;
+  static const INITIAL = Routes.SPLASH_SCREEN;
 
   static final routes = [
     GetPage(
@@ -162,6 +164,11 @@ class AppPages {
       name: _Paths.UPLOAD_PRODUCT,
       page: () => UploadProductView(),
       binding: UploadProductBinding(),
+    ),
+    GetPage(
+      name: _Paths.SPLASH_SCREEN,
+      page: () => SplashScreenView(),
+      binding: SplashScreenBinding(),
     ),
   ];
 }

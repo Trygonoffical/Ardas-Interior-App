@@ -157,23 +157,41 @@ class ProductCleanView extends GetView<ProductCleanController> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                CircleAvatar(
-                                  radius: 20,
-                                  backgroundColor:
-                                      Colors.redAccent.withOpacity(0.8),
-                                  child: Text(
-                                    "20% off",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 9,
-                                    ),
+                                Container(
+                                  height: getMediaQueryHeight(
+                                      context: context, value: 25),
+                                  width: getMediaQueryWidth(
+                                      context: context, value: 60),
+                                  color: Colors.redAccent,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "20 % ",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12,
+                                        ),
+                                      ),
+                                      Text(
+                                        "OFF",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                                 Icon(
                                   FontAwesomeIcons.heart,
                                   color: Colors.redAccent,
-                                  size: 25,
+                                  size: 22,
                                 ),
                               ],
                             ),
@@ -187,7 +205,7 @@ class ProductCleanView extends GetView<ProductCleanController> {
             ),
           ),
           SizedBox(
-            height: getMediaQueryHeight(context: context, value: 5),
+            height: getMediaQueryHeight(context: context, value: 60),
           )
         ],
       ),

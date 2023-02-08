@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class HomeController extends GetxController {
+  RxBool isLoading = false.obs;
   //TODO: Implement HomeController
   final List<String> _ids =
       ['i0fkwgyhjkQ', 'xyOdS4eUkRQ', '1--qqQrimMA', 'E3SQOqUq8Mg'].obs;

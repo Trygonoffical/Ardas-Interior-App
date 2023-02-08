@@ -78,7 +78,7 @@ class PaymentPageView extends GetView<PaymentPageController> {
                     height: getMediaQueryHeight(context: context, value: 15),
                   ),
                   Container(
-                    color: Color(0xFFE6FAE7),
+                    color: Color(0xFFD7D8D7),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ListTile(

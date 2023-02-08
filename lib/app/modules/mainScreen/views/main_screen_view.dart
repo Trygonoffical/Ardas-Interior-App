@@ -276,7 +276,7 @@ class MainScreenView extends GetView<MainScreenController> {
                     bottom: PreferredSize(
                       // ignore: sort_child_properties_last
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 8, right: 8),
+                        padding: const EdgeInsets.only(left: 10, right: 8),
                         child: Column(
                           children: [
                             Container(

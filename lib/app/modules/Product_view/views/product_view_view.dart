@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-
 import '../../../../Custom_widget/container_heigh.dart';
 import '../../../../Model/model.dart';
 import '../controllers/product_view_controller.dart';
@@ -13,9 +12,20 @@ class ProductViewView extends GetView<ProductViewController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Product View'),
-        centerTitle: true,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(
+              child: Text("Shopping"),
+              width: getMediaQueryWidth(context: context, value: 140),
+            ),
+          ],
+        ),
       ),
+      // appBar: AppBar(
+      //   title:  Text('Product View'),
+      //   centerTitle: true,
+      // ),
       body: Column(
         children: [
           Flexible(
@@ -73,12 +83,15 @@ class ProductViewView extends GetView<ProductViewController> {
                                   "Starting  ",
                                   style: TextStyle(fontSize: 14),
                                 ),
-                                Text(
-                                  NumberFormat.simpleCurrency(
-                                          locale: 'hi-IN', decimalDigits: 0)
-                                      .format(5552522)
-                                      .toString(),
-                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                Flexible(
+                                  child: Text(
+                                    NumberFormat.simpleCurrency(
+                                            locale: 'hi-IN', decimalDigits: 0)
+                                        .format(5552522)
+                                        .toString(),
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
                                 )
                               ],
                             ),

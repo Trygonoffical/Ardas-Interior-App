@@ -23,8 +23,8 @@ class OrderTrackView extends GetView<OrderTrackController> {
                   height: 30,
                 ),
                 SizedBox(
-                  height: 70,
-                  width: 250,
+                  height: getMediaQueryHeight(context: context, value: 70),
+                  width: getMediaQueryWidth(context: context, value: 250),
                   child: Text(
                     "Track your Order using Order Number",
                     textAlign: TextAlign.center,
@@ -53,20 +53,20 @@ class OrderTrackView extends GetView<OrderTrackController> {
                       borderRadius: BorderRadius.circular(9)),
                   child: Row(
                     children: [
+                      SizedBox(
+                        width: getMediaQueryWidth(context: context, value: 15),
+                      ),
                       Expanded(
                         flex: 3,
-                        child: Padding(
-                          padding: EdgeInsets.only(left: 15, top: 17),
-                          child: TextFormField(
-                            keyboardType: TextInputType.text,
-                            decoration: InputDecoration(
-                              // hintStyle: GoogleFonts.poppins(
-                              //     color: Color(0xff707070),
-                              //     fontSize: 14,
-                              //     fontWeight: FontWeight.normal),
-                              border: InputBorder.none,
-                              hintText: "Order Number",
-                            ),
+                        child: TextFormField(
+                          keyboardType: TextInputType.text,
+                          decoration: InputDecoration(
+                            // hintStyle: GoogleFonts.poppins(
+                            //     color: Color(0xff707070),
+                            //     fontSize: 14,
+                            //     fontWeight: FontWeight.normal),
+                            border: InputBorder.none,
+                            hintText: "Order Number",
                           ),
                         ),
                       ),
@@ -91,20 +91,20 @@ class OrderTrackView extends GetView<OrderTrackController> {
                       borderRadius: BorderRadius.circular(9)),
                   child: Row(
                     children: [
+                      SizedBox(
+                        width: getMediaQueryWidth(context: context, value: 15),
+                      ),
                       Expanded(
                         flex: 3,
-                        child: Padding(
-                          padding: EdgeInsets.only(left: 15, top: 17),
-                          child: TextFormField(
-                            keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
-                              // hintStyle: GoogleFonts.poppins(
-                              //     color: Color(0xff707070),
-                              //     fontSize: 14,
-                              //     fontWeight: FontWeight.normal),
-                              border: InputBorder.none,
-                              hintText: "Phone Number",
-                            ),
+                        child: TextFormField(
+                          keyboardType: TextInputType.number,
+                          decoration: InputDecoration(
+                            // hintStyle: GoogleFonts.poppins(
+                            //     color: Color(0xff707070),
+                            //     fontSize: 14,
+                            //     fontWeight: FontWeight.normal),
+                            border: InputBorder.none,
+                            hintText: "Phone Number",
                           ),
                         ),
                       ),

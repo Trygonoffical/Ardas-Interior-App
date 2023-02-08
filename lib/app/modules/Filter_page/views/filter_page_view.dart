@@ -60,7 +60,7 @@ class _FilterPageViewState extends State<FilterPageView> {
                       fontWeight: FontWeight.bold,
                       fontSize: 16),
                 )),
-                color: Colors.redAccent,
+                color: Color(0xFFFF5252),
                 // onPressed: () {
                 //   Get.to(ShopItemView());
                 // },
@@ -210,31 +210,34 @@ class _FilterPageViewState extends State<FilterPageView> {
                     SizedBox(
                       height: 25,
                     ),
-                    ExpansionTile(
-                      textColor: Colors.red,
-                      iconColor: Colors.red,
-                      title: Center(child: Text("DEAL ZONE")),
-                      childrenPadding: EdgeInsets.zero,
-                      children: [
-                        RangeSlider(
-                            divisions: 3,
-                            activeColor: Colors.red[700],
-                            inactiveColor: Colors.red[300],
-                            min: 1,
-                            max: 100,
-                            values: values,
-                            labels: labels,
-                            onChanged: (value) {
-                              print("START: ${value.start}, End: ${value.end}");
+                    Card(
+                      child: ExpansionTile(
+                        textColor: Colors.red,
+                        iconColor: Colors.red,
+                        title: Center(child: Text("DEAL ZONE")),
+                        childrenPadding: EdgeInsets.zero,
+                        children: [
+                          RangeSlider(
+                              divisions: 3,
+                              activeColor: Colors.red[700],
+                              inactiveColor: Colors.red[300],
+                              min: 1,
+                              max: 100,
+                              values: values,
+                              labels: labels,
+                              onChanged: (value) {
+                                print(
+                                    "START: ${value.start}, End: ${value.end}");
 
-                              setState(() {
-                                values = value;
-                                labels = RangeLabels(
-                                    "${value.start.toInt().toString()}\$",
-                                    "${value.start.toInt().toString()}\$");
-                              });
-                            }),
-                      ],
+                                setState(() {
+                                  values = value;
+                                  labels = RangeLabels(
+                                      "${value.start.toInt().toString()}\$",
+                                      "${value.start.toInt().toString()}\$");
+                                });
+                              }),
+                        ],
+                      ),
                     ),
                     ListView.separated(
                       physics: NeverScrollableScrollPhysics(),
@@ -246,7 +249,7 @@ class _FilterPageViewState extends State<FilterPageView> {
                         return Card(
                           child: ExpansionTile(
                             textColor: Colors.red,
-                            iconColor: Colors.red,
+                            iconColor: Color(0xFFF44336),
                             title: Center(child: Text("DEAL ZONE")),
                             childrenPadding: EdgeInsets.zero,
                             children: [

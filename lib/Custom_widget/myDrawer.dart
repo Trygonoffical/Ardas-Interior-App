@@ -94,9 +94,10 @@ class MyDrawer extends StatelessWidget {
                 thickness: 2,
               ),
               ExpansionTile(
-                textColor: Colors.red,
+                textColor: Colors.redAccent,
                 title: Text("DEAL ZONE"),
                 childrenPadding: EdgeInsets.zero,
+                iconColor: Colors.redAccent,
                 children: [
                   Container(
                     width: double.infinity,
@@ -208,9 +209,10 @@ class MyDrawer extends StatelessWidget {
                 thickness: 2,
               ),
               ExpansionTile(
-                textColor: Colors.red,
+                textColor: Colors.redAccent,
                 title: Text("LIVING"),
                 childrenPadding: EdgeInsets.zero,
+                iconColor: Colors.redAccent,
                 children: [
                   Container(
                     width: double.infinity,
@@ -503,6 +505,7 @@ class MyDrawer extends StatelessWidget {
               ExpansionTile(
                 textColor: Colors.red,
                 title: Text("SOFAS & RECLINERS"),
+                iconColor: Colors.redAccent,
                 childrenPadding: EdgeInsets.zero,
                 children: [
                   Container(
@@ -835,6 +838,7 @@ class MyDrawer extends StatelessWidget {
                 textColor: Colors.red,
                 title: Text("BEDROOM & MATTRESSES"),
                 childrenPadding: EdgeInsets.zero,
+                iconColor: Colors.redAccent,
                 children: [
                   Container(
                     width: double.infinity,
@@ -1213,6 +1217,7 @@ class MyDrawer extends StatelessWidget {
               ),
               ExpansionTile(
                 textColor: Colors.red,
+                iconColor: Colors.redAccent,
                 title: Text("DINING"),
                 childrenPadding: EdgeInsets.zero,
                 children: [
@@ -1405,6 +1410,7 @@ class MyDrawer extends StatelessWidget {
               ExpansionTile(
                 textColor: Colors.red,
                 title: Text("STORAGE"),
+                iconColor: Colors.redAccent,
                 childrenPadding: EdgeInsets.zero,
                 children: [
                   Container(
@@ -1707,6 +1713,7 @@ class MyDrawer extends StatelessWidget {
               ),
               ExpansionTile(
                 textColor: Colors.red,
+                iconColor: Colors.redAccent,
                 title: Text("STUDY"),
                 childrenPadding: EdgeInsets.zero,
                 children: [
@@ -1941,6 +1948,8 @@ class MyDrawer extends StatelessWidget {
                 thickness: 2,
               ),
               ListTile(
+                selectedColor: Colors.redAccent,
+                selectedTileColor: Colors.redAccent,
                 onTap: () {
                   Get.to(HelpPageView());
                 },

@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:get_cli/Custom_widget/container_heigh.dart';
 import 'package:intl/intl.dart';
+import 'package:like_button/like_button.dart';
 import '../../../../Model/model.dart';
 import '../ShopItem/views/shop_item_view.dart';
 import '../controllers/sholp_screen_controller.dart';
@@ -325,16 +326,27 @@ class _SholpScreenViewState extends State<SholpScreenView> {
                     Row(
                       children: [
                         CircleAvatar(
-                          backgroundColor: Color(0xFFCFC5C5),
-                          child: Icon(FontAwesomeIcons.share),
+                          backgroundColor: Colors.black,
+                          child: Icon(
+                            FontAwesomeIcons.share,
+                            color: Colors.white,
+                          ),
                         ),
                         SizedBox(
                           width:
                               getMediaQueryWidth(context: context, value: 20),
                         ),
                         CircleAvatar(
-                          backgroundColor: Color(0xFFCFC5C5),
-                          child: Icon(FontAwesomeIcons.heart),
+                          backgroundColor: Colors.black,
+                          child: LikeButton(
+                            likeBuilder: (isTapped) {
+                              return Icon(
+                                FontAwesomeIcons.solidHeart,
+                                color:
+                                    isTapped ? Colors.redAccent : Colors.white,
+                              );
+                            },
+                          ),
                         )
                       ],
                     ),
@@ -1086,58 +1098,39 @@ class _SholpScreenViewState extends State<SholpScreenView> {
                                           textAlign: TextAlign.center,
                                         ),
                                       )),
+                                      SizedBox(
+                                        width: 30,
+                                      ),
                                       Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
                                         children: [
-                                          SizedBox(
-                                            width: 30,
-                                          ),
-                                          Stack(
-                                            children: [
-                                              Text(
-                                                NumberFormat.simpleCurrency(
-                                                        locale: 'hi-IN',
-                                                        decimalDigits: 0)
-                                                    .format(
-                                                        product[index]["score"])
-                                                    .toString(),
-                                                style: TextStyle(
-                                                    decoration: TextDecoration
-                                                        .lineThrough,
-                                                    color: Colors.grey,
-                                                    fontSize: 12),
-                                              ),
-
-                                              // Prise Devider cross line
-                                              Positioned(
-                                                top: 4,
-                                                child: Container(
-                                                  width: getMediaQueryWidth(
-                                                      context: context,
-                                                      value: 60),
-                                                  height: getMediaQueryHeight(
-                                                      context: context,
-                                                      value: 2),
-                                                  color: Color(0xFF9E9E9E),
-                                                ),
-                                              )
-                                            ],
+                                          Text(
+                                            NumberFormat.simpleCurrency(
+                                                    locale: 'hi-IN',
+                                                    decimalDigits: 0)
+                                                .format(product[index]["score"])
+                                                .toString(),
+                                            style: TextStyle(
+                                                decoration:
+                                                    TextDecoration.lineThrough,
+                                                color: Colors.grey,
+                                                fontSize: 12),
                                           ),
                                           SizedBox(
                                               width: getMediaQueryWidth(
-                                                  context: context, value: 6)
-                                              //6,
-                                              ),
-                                          Expanded(
-                                            child: Text(
-                                              NumberFormat.simpleCurrency(
-                                                      locale: 'hi-IN',
-                                                      decimalDigits: 0)
-                                                  .format(2929528)
-                                                  .toString(),
-                                              style: TextStyle(
-                                                  color: Color(0xFF2196F3),
-                                                  fontSize: 12),
-                                            ),
+                                                  context: context, value: 5)),
+                                          Text(
+                                            NumberFormat.simpleCurrency(
+                                                    locale: 'hi-IN',
+                                                    decimalDigits: 0)
+                                                .format(2929528)
+                                                .toString(),
+                                            style: TextStyle(
+                                                color: Color(0xFF2196F3),
+                                                fontSize: 12),
                                           ),
                                         ],
                                       ),
@@ -1190,7 +1183,7 @@ class _SholpScreenViewState extends State<SholpScreenView> {
                       padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                       child: SizedBox(
                         height:
-                            getMediaQueryHeight(context: context, value: 500),
+                            getMediaQueryHeight(context: context, value: 430),
                         // height: MediaQuery.of(context).size.height * 0.29,
                         width: MediaQuery.of(context).size.width,
                         child: ListView.separated(
@@ -1298,7 +1291,7 @@ class _SholpScreenViewState extends State<SholpScreenView> {
               ),
 
               Container(
-                height: getMediaQueryHeight(context: context, value: 80),
+                height: getMediaQueryHeight(context: context, value: 20),
                 width: double.infinity,
                 color: Colors.white,
               )

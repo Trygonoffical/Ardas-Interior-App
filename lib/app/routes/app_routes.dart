@@ -26,6 +26,7 @@ abstract class Routes {
   static const HELP_EXPENTION = _Paths.HELP_EXPENTION;
   static const FILTER_PAGE = _Paths.FILTER_PAGE;
   static const UPLOAD_PRODUCT = _Paths.UPLOAD_PRODUCT;
+  static const SPLASH_SCREEN = _Paths.SPLASH_SCREEN;
 }
 
 abstract class _Paths {
@@ -53,4 +54,5 @@ abstract class _Paths {
   static const HELP_EXPENTION = '/help-expention';
   static const FILTER_PAGE = '/filter-page';
   static const UPLOAD_PRODUCT = '/upload-product';
+  static const SPLASH_SCREEN = '/splash-screen';
 }
