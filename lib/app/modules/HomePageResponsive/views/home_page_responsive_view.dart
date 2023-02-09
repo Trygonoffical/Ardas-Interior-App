@@ -1669,7 +1669,9 @@ class _HomePageResponsiveViewState extends State<HomePageResponsiveView> {
                         }),
                       ),
                     ),
-                    Sized(),
+                    SizedBox(
+                      height: getMediaQueryHeight(context: context, value: 40),
+                    ),
                     Center(
                       child: Text(
                         "Live what you see? You'll like us even more here",
@@ -1677,7 +1679,9 @@ class _HomePageResponsiveViewState extends State<HomePageResponsiveView> {
                         style: TextStyle(fontSize: 22),
                       ),
                     ),
-                    Sized(),
+                    SizedBox(
+                      height: getMediaQueryHeight(context: context, value: 40),
+                    ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1718,7 +1722,9 @@ class _HomePageResponsiveViewState extends State<HomePageResponsiveView> {
                         )
                       ],
                     ),
-                    Sized(),
+                    SizedBox(
+                      height: getMediaQueryHeight(context: context, value: 40),
+                    )
                   ],
                 ),
               ),
