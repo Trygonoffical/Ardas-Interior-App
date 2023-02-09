@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:get_cli/Custom_widget/Responsive/testing.dart';
 import 'package:get_cli/Custom_widget/container_heigh.dart';
 import 'package:get_cli/app/modules/Product_details/views/product_details_view.dart';
 import '../../../../Model/model.dart';
@@ -794,7 +795,7 @@ class HomeView extends GetView<HomeController> {
                       padding: const EdgeInsets.all(8.0),
                       child: GestureDetector(
                         onTap: () {
-                          Get.to(UploadProductView());
+                          Get.to(TestingLayout());
                         },
                         child: Container(
                             // height: getMediaQueryHeight(
