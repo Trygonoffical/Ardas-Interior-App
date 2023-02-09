@@ -51,12 +51,10 @@ class ProductViewView extends GetView<ProductViewController> {
                         Column(
                           children: [
                             SizedBox(
-                              height: getMediaQueryHeight(
-                                  context: context, value: 120),
                               width: double.infinity,
                               child: Image.asset(
                                 shopItem[index]["materialpic"].toString(),
-                                fit: BoxFit.fill,
+                                fit: BoxFit.contain,
                               ),
                             ),
                             Divider(

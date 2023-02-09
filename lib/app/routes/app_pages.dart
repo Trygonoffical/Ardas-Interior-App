@@ -12,6 +12,8 @@ import '../modules/HelpPage/Help_Expention/bindings/help_expention_binding.dart'
 import '../modules/HelpPage/Help_Expention/views/help_expention_view.dart';
 import '../modules/HelpPage/bindings/help_page_binding.dart';
 import '../modules/HelpPage/views/help_page_view.dart';
+import '../modules/HomePageResponsive/bindings/home_page_responsive_binding.dart';
+import '../modules/HomePageResponsive/views/home_page_responsive_view.dart';
 import '../modules/Notification/bindings/notification_binding.dart';
 import '../modules/Notification/views/notification_view.dart';
 import '../modules/Order_Track/bindings/order_track_binding.dart';
@@ -169,6 +171,11 @@ class AppPages {
       name: _Paths.SPLASH_SCREEN,
       page: () => SplashScreenView(),
       binding: SplashScreenBinding(),
+    ),
+    GetPage(
+      name: _Paths.HOME_PAGE_RESPONSIVE,
+      page: () => const HomePageResponsiveView(),
+      binding: HomePageResponsiveBinding(),
     ),
   ];
 }

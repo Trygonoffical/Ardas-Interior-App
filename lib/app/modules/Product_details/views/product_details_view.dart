@@ -60,7 +60,7 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
                   crossAxisCount: 2,
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10,
-                  mainAxisExtent: 200, // here set custom Height You Want
+                  mainAxisExtent: 250, // here set custom Height You Want
                 ),
                 itemCount: 10,
                 itemBuilder: (BuildContext context, int index) {
@@ -77,8 +77,6 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           SizedBox(
-                            height: getMediaQueryHeight(
-                                context: context, value: 100),
                             width: double.infinity,
                             child: Image.asset(
                               shopItem[index]["materialpic"].toString(),
@@ -86,11 +84,8 @@ class ProductDetailsView extends GetView<ProductDetailsController> {
                             ),
                           ),
 
-                          Padding(
-                            padding: EdgeInsets.only(top: 10.0, bottom: 5),
-                            child: Text(
-                              shopItem[index]["materialname"].toString(),
-                            ),
+                          Text(
+                            shopItem[index]["materialname"].toString(),
                           ),
                           // SizedBox(
                           //   height: getMediaQueryHeight(

@@ -27,6 +27,7 @@ abstract class Routes {
   static const FILTER_PAGE = _Paths.FILTER_PAGE;
   static const UPLOAD_PRODUCT = _Paths.UPLOAD_PRODUCT;
   static const SPLASH_SCREEN = _Paths.SPLASH_SCREEN;
+  static const HOME_PAGE_RESPONSIVE = _Paths.HOME_PAGE_RESPONSIVE;
 }
 
 abstract class _Paths {
@@ -55,4 +56,5 @@ abstract class _Paths {
   static const FILTER_PAGE = '/filter-page';
   static const UPLOAD_PRODUCT = '/upload-product';
   static const SPLASH_SCREEN = '/splash-screen';
+  static const HOME_PAGE_RESPONSIVE = '/home-page-responsive';
 }
